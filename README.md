@@ -1,7 +1,7 @@
 # ng1api
 Python Wrapper for nGeniusONE RESTFul API
 
-Usage / Example :
+##Usage / Example :
 from ng1_api import NG1APIObject
 
 # Create ng1 instance to manipulate REST API
