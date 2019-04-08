@@ -10,7 +10,7 @@ class nG1Session(nG1Parent):
 		self.USER = user
 		self.PASS = passw
 
-	def openSession(self) :
+	def open(self) :
 		""" Open a session.  You do not need to use your credentials once session is open."""
 
 		# Create Basic Auth headers
@@ -20,6 +20,6 @@ class nG1Session(nG1Parent):
 		 
 		return self.OPENER.open(req, data=" ")
 
-	def closeSession(self):
+	def close(self):
 		""" Close a session."""
 		return self.OPENER.open(self.API_URL+"/close", data="")

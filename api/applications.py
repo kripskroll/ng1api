@@ -30,7 +30,7 @@ class nG1Applications(nG1Parent):
 
 		return self.OPENER.open(url)
 
-	def addApplication(self, file):
+	def add(self, file):
 		"""Used to add custom applications to be monitored. The following types of applications can be added through the API: well-known applications, server-based applications, and URL applications.
 
 		Arguments :
@@ -40,7 +40,7 @@ class nG1Applications(nG1Parent):
 
 		return self.OPENER.open(req)
 
-	def delApplication(self, name):
+	def delete(self, name):
 		"""Delete Application by Name.
 		Used to delete a specific custom application, so that it will no longer be monitored by your nGeniusONE server.
 
@@ -54,8 +54,13 @@ class nG1Applications(nG1Parent):
 
 		return self.OPENER.open(request)
 
-	def updateApplication(self, file):
-		"""curl -X POST –u <username>:<password> -d @input.txt -k https://<server-ip-address>:<ssl-port>/ng1api/ncm/applications"""
+	def update(self, file):
+		""" Update Application defined in file
+
+		Arguments :
+		file -- file with application(s) description in XML format to update
+		curl -X POST –u <username>:<password> -d @input.txt -k https://<server-ip-address>:<ssl-port>/ng1api/ncm/applications"""
+		
 		headers = {"Content-Type":"application/xml"}
 		req = Request(self.API_URL, file, headers)
 		req.get_method = lambda: 'PUT'

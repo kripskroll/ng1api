@@ -13,7 +13,7 @@ class nG1Services(nG1Parent):
 		self.OPENER = opener
 		self.API_URL = base_url + '/ncm/services'
 
-	def getServices(self, type=None):
+	def get(self, type=None):
 		"""Used to view services on a nGeniusONE server.
 
 		Arguments :
@@ -28,7 +28,7 @@ class nG1Services(nG1Parent):
 		
 		return self.OPENER.open(self.API_URL)
 
-	def getServiceDetail(self, name):
+	def getDetail(self, name):
 		"""Used to get service details associated with a service.
 
 		Arguments :

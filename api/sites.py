@@ -13,7 +13,7 @@ class nG1Sites(nG1Parent):
 		self.OPENER = opener
 		self.API_URL = base_url + '/ncm/sites'
 
-	def getSite(self, arg):
+	def get(self, arg):
 		
 		if arg=="all" :
 			return self.OPENER.open(self.API_URL)
@@ -22,7 +22,7 @@ class nG1Sites(nG1Parent):
 
 		return self.OPENER.open(self.API_URL)
 
-	def addSite(self, arg):
+	def add(self, arg):
 		# Add multiple sites or specific site using same way by passing full XML/JSON
 		
 		headers = {"Content-Type":"application/xml"}
@@ -30,12 +30,12 @@ class nG1Sites(nG1Parent):
 
 		return self.OPENER.open(req)
 
-	def updateSite(self, arg):
+	def update(self, arg):
 		# Update multiple sites or specific site using same way by passing full XML/JSON
 
 		return self.OPENER.open(self.API_URL, arg)
 
-	def delSite(self, arg):
+	def delete(self, arg):
 		# Delete multiple sites or specific site using same way by passing full XML/JSON
 		
 		arg = quote(arg) # Replace spaces with %20
