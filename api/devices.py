@@ -1,6 +1,5 @@
 # 2019-04-02
-# Stephane Froment
-# NETSCOUT Systems Ltd
+# Kripskroll
 #########################
 
 from urllib import quote
