@@ -1,9 +1,14 @@
+# 2019-04-02
+# Stephane Froment
+# NETSCOUT Systems Ltd
+#########################
+
 # from api/parent.py
 class nG1Parent(object):
 	""" This class is to refactor methods in every subclasses
 
 	Arguments :
-	subType -- The sub-type to address."""
+		subType -- The sub-type to address."""
 	def getRequestURL(self, subType):
 		request_url = self.API_URL
 		if subType :

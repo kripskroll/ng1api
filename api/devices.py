@@ -1,16 +1,21 @@
+# 2019-04-02
+# Stephane Froment
+# NETSCOUT Systems Ltd
+#########################
+
 from urllib import quote
 from urllib2 import Request
 from parent import nG1Parent
 
 class nG1Devices(nG1Parent):
-	""" This class is for Devices
-
-	Arguments :
-	opener -- The opener built with Cookie handler.
-	base_url -- The REST API base URL."""
+	""" This class is for Devices"""
 
 	def __init__(self, opener, base_url):
+		"""Instance for nGeniusONE Devices Constructor
 
+		Arguments :
+			opener -- The opener built with Cookie handler.
+			base_url -- The REST API base URL"""
 		self.OPENER = opener
 		self.API_URL = base_url + '/ncm/devices'
 
